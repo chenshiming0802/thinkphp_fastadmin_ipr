@@ -71,7 +71,7 @@ https://ipr.163fan.com
 
 联系方式: chenshiming0802@163.com
 
-Github: 待补充
+Github: https://github.com/chenshiming0802/thinkphp_fastadmin_ipr
 
 Gitee: https://gitee.com/chenshiming0802/thinkphp_fastadmin_ipr
 
