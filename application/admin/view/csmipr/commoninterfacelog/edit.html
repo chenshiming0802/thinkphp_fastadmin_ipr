@@ -1,0 +1,45 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-url" class="form-control" name="row[url]" type="text" value="{$row.url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Request_post')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-request_post" class="form-control " rows="5" name="row[request_post]" cols="50">{$row.request_post|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Request_result')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-request_result" class="form-control " rows="5" name="row[request_result]" cols="50">{$row.request_result|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Costsecond')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-costsecond" class="form-control" name="row[costsecond]" type="number" value="{$row.costsecond|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Issuccess')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-issuccess" class="form-control selectpicker" name="row[issuccess]">
+                {foreach name="issuccessList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.issuccess"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

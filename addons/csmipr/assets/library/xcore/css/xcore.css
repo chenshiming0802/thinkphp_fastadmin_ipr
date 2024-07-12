@@ -1,0 +1,19 @@
+.xc-detail-group-title {
+    clear: both;
+    width: 100%;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.xc-detail-group-title:before {
+    content: ' ';
+    display: block;
+    width: 3px;
+    height: 15px;
+    background: #0a8cd2;
+    float: left;
+    margin-right: 10px;
+}
+ 

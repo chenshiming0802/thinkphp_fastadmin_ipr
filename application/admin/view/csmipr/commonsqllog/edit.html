@@ -1,0 +1,45 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Request_uuid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-request_uuid" class="form-control" name="row[request_uuid]" type="text" value="{$row.request_uuid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Sql')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-sql" class="form-control" name="row[sql]" type="text" value="{$row.sql|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Costtime')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-costtime" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[costtime]" type="text" value="{:$row.costtime?datetime($row.costtime):''}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-rule="required" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Baseurl')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-baseurl" class="form-control" name="row[baseurl]" type="text" value="{$row.baseurl|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Request_post')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-request_post" class="form-control" name="row[request_post]" type="text" value="{$row.request_post|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

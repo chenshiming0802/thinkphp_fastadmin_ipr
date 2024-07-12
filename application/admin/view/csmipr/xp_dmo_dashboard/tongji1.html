@@ -1,0 +1,159 @@
+<style>
+    .tab-content>.chart {
+        padding: 10px;
+    }
+</style>
+<div class="row">
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>{$total_count}</h3>
+
+                <p>总数量</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-users"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-green">
+            <div class="inner">
+                <h3>{$today_count}</h3>
+                <p>今日新增</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-users"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>{$d7_count}</h3>
+                <p>最近7天新增</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-tasks"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>{$d30_count}</h3>
+
+                <p>最近30天新增</p>
+            </div>
+            <div class="icon">
+                <i class="fa fa-tasks"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row" style="margin-bottom:5px;">
+    <section class="col-lg-7 connectedSortable">
+        <div class="nav-tabs-custom charts-custom">
+            <ul class="nav nav-tabs pull-right">
+                <li class="pull-left header"><i class="fa fa-inbox"></i> 周用户活跃</li>
+            </ul>
+            <div class="tab-content no-padding">
+                <div class="chart tab-pane active" id="user_week_line" style="position: relative; height: 325px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-5 connectedSortable">
+        <div class="box box-solid bg-teal-gradient">
+            <div class="box-header">
+                <i class="fa fa-th"></i>
+
+                <h3 class="box-title">用户设备统计</h3>
+
+                <div class="box-tools pull-right">
+                </div>
+            </div>
+            <div class="box-body border-radius-none">
+                <div class="chart" id="user_port_pie" style="height: 300px;"></div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="row" style="margin-bottom:5px;">
+    <section class="col-lg-7 connectedSortable">
+        <div class="nav-tabs-custom charts-custom">
+            <div class="box-header">
+                <i class="fa fa-th"></i>
+
+                <h3 class="box-title">Dmo创建统计</h3>
+
+                <div class="box-tools pull-right">
+                </div>
+            </div>
+            <div class="tab-content no-padding">
+                <!-- Morris chart - Sales -->
+                <div class="chart tab-pane active" id="data_line" style="position: relative; height: 325px;"></div>
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-5 connectedSortable">
+        <!-- solid sales graph -->
+        <div class="box box-solid bg-teal-gradient">
+            <div class="box-header">
+                <i class="fa fa-th"></i>
+
+                <h3 class="box-title">Dmo类型统计</h3>
+
+                <div class="box-tools pull-right">
+                </div>
+            </div>
+            <div class="box-body border-radius-none">
+                <div class="chart" id="data_pie" style="height: 300px;"></div>
+            </div>
+            <!-- /.box-body-->
+        </div>
+        <!-- /.box -->
+    </section>
+</div>
+
+
+<div class="row" style="margin-bottom:5px;">
+    <section class="col-lg-7 connectedSortable">
+        <div class="nav-tabs-custom charts-custom">
+            <div class="box-header">
+                <i class="fa fa-th"></i>
+
+                <h3 class="box-title">最近DMO数据</h3>
+
+                <div class="box-tools pull-right">
+                </div>
+            </div>
+            <div class="tab-content no-padding" width="100%;height:200px;">
+                <table id="page1_list1" class="table table-striped table-bordered table-hover table-nowrap"
+                   width="100%">
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="col-lg-5 connectedSortable">
+        <div class="nav-tabs-custom charts-custom">
+            <div class="box-header">
+                <i class="fa fa-th"></i>
+
+                <h3 class="box-title">用户列表</h3>
+
+                <div class="box-tools pull-right">
+                </div>
+            </div>
+            <div class="tab-content no-padding" width="100%;height:200px;">
+                <table id="page1_list2" class="table table-striped table-bordered table-hover table-nowrap"
+                    width="100%">
+                </table>
+            </div>
+        </div>
+    </section>
+</div>

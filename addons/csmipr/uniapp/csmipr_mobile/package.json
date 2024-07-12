@@ -1,0 +1,16 @@
+{
+  "name": "csmipr_mobile",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "@climblee/uv-ui": "^1.1.20",
+    "luch-request": "^3.1.1",
+    "xstack-for-javascript": "^1.0.6"
+  }
+}

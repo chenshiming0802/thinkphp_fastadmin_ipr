@@ -1,0 +1,243 @@
+<form id="edit-form" class="form-horizontal  xc-detailpage-div" role="form" data-toggle="validator" method="POST" action="">
+    <div class="xc-grouptitle">基本信息</div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Tuan_image')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-tuan_image" class="form-control" size="50" name="row[tuan_image]" type="text" value="{$row.tuan_image|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-tuan_image" class="btn btn-danger faupload" data-input-id="c-tuan_image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp,image/webp" data-multiple="false" data-preview-id="p-tuan_image"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-tuan_image" class="btn btn-primary fachoose" data-input-id="c-tuan_image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-tuan_image"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-tuan_image"></ul>
+        </div>
+    </div>
+    <div class="form-group col-xs-12"></div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Fenlei_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-fenlei_id" data-source="csmipr/shangbiao_fenlei/index" class="form-control selectpage" name="row[fenlei_id]" type="text" value="{$row.fenlei_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Zhucehao')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhucehao" class="form-control" name="row[zhucehao]" type="text" value="{$row.zhucehao|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Zhuangtai_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhuangtai_id" data-source="csmipr/shangbiao_zhuangtai/index" class="form-control selectpage" name="row[zhuangtai_id]" type="text" value="{$row.zhuangtai_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Isgongyu')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-isgongyu" class="form-control selectpicker" name="row[isgongyu]">
+                {foreach name="isgongyuList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.isgongyu"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Leixing')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-leixing" class="form-control" name="row[leixing]" type="text" value="{$row.leixing|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Youxianquan_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-youxianquan_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[youxianquan_date]" type="text" value="{$row.youxianquan_date}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Xingshi')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-xingshi" class="form-control" name="row[xingshi]" type="text" value="{$row.xingshi|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Guojizhuce_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-guojizhuce_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[guojizhuce_date]" type="text" value="{$row.guojizhuce_date}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Houqizhiding_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-houqizhiding_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[houqizhiding_date]" type="text" value="{$row.houqizhiding_date}">
+        </div>
+    </div>
+    <div class="form-group col-xs-12">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Leisiqun')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-leisiqun" class="form-control" name="row[leisiqun]" type="text" value="{$row.leisiqun|htmlentities}">
+        </div>
+    </div>
+
+    <div class="xc-grouptitle">法律信息</div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Shenqingren')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shenqingren" class="form-control" name="row[shenqingren]" type="text" value="{$row.shenqingren|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('En_shenqingren')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-en_shenqingren" class="form-control" name="row[en_shenqingren]" type="text" value="{$row.en_shenqingren|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Shenqingrendizhi')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shenqingrendizhi" class="form-control" name="row[shenqingrendizhi]" type="text" value="{$row.shenqingrendizhi|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('En_shenqingrendizhi')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-en_shenqingrendizhi" class="form-control" name="row[en_shenqingrendizhi]" type="text" value="{$row.en_shenqingrendizhi|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Banlijigou')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-banlijigou" class="form-control" name="row[banlijigou]" type="text" value="{$row.banlijigou|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Shenqing_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shenqing_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[shenqing_date]" type="text" value="{$row.shenqing_date}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">专用权期限:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhuanyongquan_begindate" style="width:100px" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[zhuanyongquan_begindate]" type="text" value="{$row.zhuanyongquan_begindate}">
+            ~
+            <input id="c-zhuanyongquan_enddate" style="width:100px" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[zhuanyongquan_enddate]" type="text" value="{$row.zhuanyongquan_enddate}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Chushengonggaoqihao')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-chushengonggaoqihao" class="form-control" name="row[chushengonggaoqihao]" type="text" value="{$row.chushengonggaoqihao|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Chushengonggao_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-chushengonggao_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[chushengonggao_date]" type="text" value="{$row.chushengonggao_date}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Zhucegonggaoqihao')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhucegonggaoqihao" class="form-control" name="row[zhucegonggaoqihao]" type="text" value="{$row.zhucegonggaoqihao|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Zhucegonggao_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhucegonggao_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-use-current="true" name="row[zhucegonggao_date]" type="text" value="{$row.zhucegonggao_date}">
+        </div>
+    </div>
+
+    <div class="xc-grouptitle">商标范围</div>
+    <div class="form-group col-xs-12">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shangbiaoshangpingfuwu')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shangbiaoshangpingfuwu" class="form-control" name="row[shangbiaoshangpingfuwu]" type="text" value="{$row.shangbiaoshangpingfuwu|htmlentities}">
+        </div>
+    </div>
+
+    <!-- <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Zhidingyanse')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-zhidingyanse" class="form-control" name="row[zhidingyanse]" type="text" value="{$row.zhidingyanse|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Hastuan')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-hastuan" class="form-control selectpicker" name="row[hastuan]">
+                {foreach name="hastuanList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.hastuan"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Liuchegnzhuagntai_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-liuchegnzhuagntai_id" data-source="csmipr/liuchegnzhuagntai/index" class="form-control selectpage" name="row[liuchegnzhuagntai_id]" type="text" value="{$row.liuchegnzhuagntai_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Desc')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <textarea id="c-desc" class="form-control " rows="5" name="row[desc]" cols="50">{$row.desc|htmlentities}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('From_source')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-from_source" class="form-control" name="row[from_source]" type="text" value="{$row.from_source|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('From_uuid')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-from_uuid" class="form-control" name="row[from_uuid]" type="text" value="{$row.from_uuid|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('User_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-user_id" data-source="user/user/index" data-field="nickname" class="form-control selectpage" name="row[user_id]" type="text" value="{$row.user_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Weigh')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-weigh" class="form-control" name="row[weigh]" type="number" value="{$row.weigh|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="statusList" item="vo"}
+            <label for="row[status]-{$key}"><input id="row[status]-{$key}" name="row[status]" type="radio" value="{$key}" {in name="key" value="$row.status"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div> -->
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-4"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,77 @@
+
+$theme_logobcolor: #1688f1;
+$theme_logocolor: #1688f1;
+$theme_highlightcolor: red;
+
+
+.xc-wrap-grey{
+	background-color: $uni-bg-color-grey;
+}
+// common
+.xc-wrap,.xc-wrap-grey {
+	height: calc(100vh - 48px);
+}
+// text
+.xc-wrap,.xc-wrap-grey {	
+	.xc-title{
+		font-size: $uni-font-size-title;
+		font-weight: bold;
+		padding:$uni-spacing-col-lg 0px;		
+		color:$uni-color-title;
+	}
+	.xc-titledesc{
+		font-size: 11px;
+		padding:$uni-spacing-col-sm 0px;
+		color:$uni-text-color-grey;
+	}
+	.xc-content{
+		font-size: $uni-font-size-paragraph;
+		padding:$uni-spacing-col-base 0px;
+		color:$uni-color-paragraph;
+	}
+	.xc-afterbuton{
+		font-size: $uni-font-size-sm;
+		color:$uni-text-color-grey;
+		padding-top:$uni-spacing-row-sm;
+		text-align: right;
+	}
+}
+
+// block
+.xc-wrap,.xc-wrap-grey{
+	.xc-block,.xc-block-bottom{
+		padding:$uni-spacing-col-lg;
+	}
+	.xc-block-bottom{
+		z-index: 990;
+		position: fixed;
+		bottom: 0px;
+		height: 40px;
+		width:100%;
+		background-color: #ffffff;
+		box-shadow:2px 2px 7px $uni-text-color-grey;
+		
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		text-align: center;
+		
+		.xc-two-button{
+			width:calc(100vw - 20px);
+			.uv-button-wrapper{
+				width: 100px !important;
+				display: inline-block;
+				padding:0px 10px;
+			}		
+		}
+		.xc-one-button{		
+			.uv-button-wrapper{
+				width:calc(100vw - 20px);				
+			}		
+		}
+
+	}
+	.xc-block-bottom-fill{
+		height: 80px;
+	}
+}

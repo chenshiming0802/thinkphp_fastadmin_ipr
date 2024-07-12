@@ -1,0 +1,108 @@
+// https://uniapp.dcloud.net.cn/collocation/pages.html
+{
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uv-(.*)": "@climblee/uv-ui/components/uv-$1/uv-$1.vue",
+			"^xc-(.*)": "@/library/xcore/component/xc-$1.vue",
+			"^xa-(.*)": "@/library/xapp/component/xa-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pagesƒƒƒƒƒƒ
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/xcdemo/index",
+			"style": {
+				"navigationBarTitleText": "uni-appXcDemo"
+			}
+		},
+		{
+			"path": "pages/xclogin/login",
+			"style": {
+				"navigationBarTitleText": "用户登录"
+			}
+		},
+		{
+			"path": "pages/xclogin/login_mobilecaptcha",
+			"style": {
+				"navigationBarTitleText": "验证码"
+			}
+		},
+		{
+			"path": "pages/xcdemo/dmo/list_tabs",
+			"style": {
+				"navigationBarTitleText": "DMO List",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/xcdemo/dmo/list_vtabs",
+			"style": {
+				"navigationBarTitleText": "DMO List",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/xcdemo/dmo/item",
+			"style": {
+				"navigationBarTitleText": "DMO Item",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path" : "pages/xclogin/me",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/xclogin/policy",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/xclogin/me_profile",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的信息"
+			}
+		},
+		{
+			"path" : "pages/xclogin/me_delete",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/xcdemo/dmoapply/form",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/xcdemo/dmoapply/list",
+			"style" : 
+			{
+				"navigationBarTitleText" : "DMO APPLY"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	
+	"uniIdRouter": {}
+}
