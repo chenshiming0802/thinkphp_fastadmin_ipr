@@ -1,4 +1,20 @@
-CSM 知识产权管理系统赋能企业对企业的商标、专利和著作权的沉淀和管理，替代传统Excel方式。
+<b>知识产权管理系统（开源版）</b><BR>
+赋能企业对企业的商标、专利和著作权的沉淀和管理，替代传统Excel方式。
+
+## 在线演示
+
+https://ipr.163fan.com
+
+用户名：ipr
+
+密　码：123456
+
+提　示：演示站数据无法进行修改 ，请下载源码安装体验全部功能
+
+## 界面截图
+![页面一](docs/images/software/pc_index_home.png)
+![页面二](docs/images/software/pc_cosole_home.jpg)
+
 
 ## 功能清单
 * 商标管理
@@ -39,19 +55,6 @@ CSM 知识产权管理系统赋能企业对企业的商标、专利和著作权�
 
 ![安装程序](docs/images/install/website_install_page.png)
 
-## 在线演示
-
-https://ipr.163fan.com
-
-用户名：ipr
-
-密　码：123456
-
-提　示：演示站数据无法进行修改，请下载源码安装体验全部功能
-
-## 界面截图
-![页面一](docs/images/software/pc_index_home.png)
-![页面二](docs/images/software/pc_cosole_home.jpg)
 
 ## 部署环境
 * Mysql 5+
