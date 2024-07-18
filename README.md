@@ -84,6 +84,8 @@ Gitee: https://gitee.com/chenshiming0802/thinkphp_fastadmin_ipr
 
 ThinkPHP：http://www.thinkphp.cn
 
+FastAdmin：https://www.fastadmin.net/
+
 AdminLTE：https://adminlte.io
 
 Bootstrap：http://getbootstrap.com
