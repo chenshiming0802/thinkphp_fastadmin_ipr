@@ -55,6 +55,9 @@ https://ipr.163fan.com
 
 ![安装程序](docs/images/install/website_install_page.png)
 
+## 重新安装
+* 运行脚本
+php xp_product_console_revertinstall.php
 
 ## 部署环境
 * Mysql 5+

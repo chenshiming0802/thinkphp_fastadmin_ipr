@@ -22,11 +22,17 @@ insert  into `fa_auth_rule`(`id`,`type`,`pid`,`name`,`title`,`icon`,`url`,`condi
 (453,'file',448,'csmipr/shangbiao_zhuangtai/del','删除','fa fa-circle-o','','','',0,NULL,'','sc','shanchu',1720076073,1720076073,0,'normal'),
 (454,'file',448,'csmipr/shangbiao_zhuangtai/multi','批量更新','fa fa-circle-o','','','',0,NULL,'','plgx','pilianggengxin',1720076073,1720076073,0,'normal'),
 (468,'file',433,'csmipr/mulu_shangbiao','商标管理','fa fa-circle-o','','','',1,'addtabs','','sbgl','shangbiaoguanli',1720429199,1720429275,0,'normal'),
-(469,'file',433,'csmipr/mulu_jichu','基础数据','fa fa-circle-o','','','',1,'addtabs','','jcsj','jichushuju',1720429263,1720429263,0,'normal');
-
+(469,'file',433,'csmipr/mulu_jichu','基础数据','fa fa-circle-o','','','',1,'addtabs','','jcsj','jichushuju',1720429263,1720429263,0,'normal'),
+(470,'file',433,'csmipr/company','公司法体管理','fa fa-circle-o\r','','','',1,NULL,'','gsftgl','gongsifatiguanli',1723107170,1723107170,0,'normal'),
+(471,'file',470,'csmipr/company/index','查看','fa fa-circle-o','','','',0,NULL,'','zk','zhakan',1723107171,1723107171,0,'normal'),
+(472,'file',470,'csmipr/company/add','添加','fa fa-circle-o','','','',0,NULL,'','tj','tianjia',1723107171,1723107171,0,'normal'),
+(473,'file',470,'csmipr/company/edit','编辑','fa fa-circle-o','','','',0,NULL,'','bj','bianji',1723107171,1723107171,0,'normal'),
+(474,'file',470,'csmipr/company/del','删除','fa fa-circle-o','','','',0,NULL,'','sc','shanchu',1723107171,1723107171,0,'normal'),
+(475,'file',470,'csmipr/company/multi','批量更新','fa fa-circle-o','','','',0,NULL,'','plgx','pilianggengxin',1723107171,1723107171,0,'normal');
 
 CREATE TABLE `fa_csmipr_shangbiao` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `csmipr_company_id` int(11) DEFAULT NULL COMMENT '公司法体',
   `name` varchar(100) DEFAULT '' COMMENT '名称',
   `tuan_image` varchar(100) DEFAULT '' COMMENT '图案',
   `fenlei_id` int(11) DEFAULT NULL COMMENT '国际分类',
@@ -68,6 +74,7 @@ CREATE TABLE `fa_csmipr_shangbiao` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COMMENT='商标';
 
 /*Data for the table `fa_csmipr_shangbiao` */
+
 
 CREATE TABLE `fa_csmipr_shangbiao_fenlei` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
@@ -195,3 +202,16 @@ CREATE TABLE `fa_csmipr_shangbiaozhuceliucheng` (
   `status` enum('normal','hidden') DEFAULT 'normal' COMMENT '状态',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='商标注册流程';
+
+CREATE TABLE `fa_csmipr_company` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `name` varchar(100) DEFAULT '' COMMENT '公司名',
+  `org_code` varchar(100) DEFAULT '' COMMENT '统一组织机构代码',
+  `desc` text COMMENT '描述',
+  `admin_id` int(10) DEFAULT '0' COMMENT '管理员ID',
+  `createtime` bigint(16) DEFAULT NULL COMMENT '创建时间',
+  `updatetime` bigint(16) DEFAULT NULL COMMENT '更新时间',
+  `weigh` int(10) DEFAULT '0' COMMENT '权重',
+  `status` enum('normal','hidden') DEFAULT 'normal' COMMENT '状态',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='公司法体表';

@@ -9,6 +9,7 @@
 
 return [
     'Id'                      => 'ID',
+    'Csmipr_company_id'       => '公司法体', 
     'Name'                    => '名称',
     'Tuan_image'              => '图案',
     'Fenlei_id'               => '国际分类',

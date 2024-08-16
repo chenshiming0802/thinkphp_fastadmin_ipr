@@ -14,6 +14,12 @@
             <ul class="row list-inline faupload-preview" id="p-tuan_image"></ul>
         </div>
     </div>
+    <div class="form-group col-xs-6">
+        <label class="control-label col-xs-12 col-sm-4">{:__('Csmipr_company_id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-csmipr_company_id" data-source="csmipr/company/index" data-field="name" class="form-control selectpage" name="row[csmipr_company_id]" type="text" value="{$row.csmipr_company_id|htmlentities}">
+        </div>
+    </div>
     <div class="form-group col-xs-12"></div>
     <div class="form-group col-xs-6">
         <label class="control-label col-xs-12 col-sm-4">{:__('Name')}:</label>
