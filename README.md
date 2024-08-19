@@ -9,7 +9,7 @@ https://ipr.163fan.com
 
 密　码：123456
 
-提　示：演示站数据无法进行修改 ，请下载源码安装体验全部功能
+提　示：演示站数据无法进行修改  请下载源码安装体验全部功能
 
 ## 界面截图
 ![页面一](docs/images/software/pc_index_home.png)
